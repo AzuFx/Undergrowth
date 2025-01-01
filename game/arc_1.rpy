@@ -1,13 +1,30 @@
 label nov_1:
-
+    
     stop music
-    $ save_name = _("Prologue")
+
+    #Testing setup for Winter Jam spriting: with all of this commented out, the game will toss you into November as normal!
+    #$ aston_safe = True #(False = Aston ded)
+    #$ pearl_safe = True #(False = Pearl ded)
+    #$ days404testing = True #If enabled, will have noncontiguous 404'd Days skip forward so you can see all of 'em in sequence (not chronological)
+    #$ ruran_safe = True #(False = Ruran ded/going to die)
+    #$ ru_branch_yoinked = True #(True = Ruran cause of death is by tree-branch yoinkage)
+    #jump dec_31_2
+    #jump jan_27
+    #jump [whatever label you want here]
+    
+
+    #Regular November stuff
+    $ current_day = _("November 1st")
+    $ save_name = current_date(_("Prologue"), current_day)
+    show screen date_label with dissolve
     show cg morganhome1
     $ persistent.gallery_morganhome = True
 
+    play music audio.ad fadein 3.0
     tv_hi "Glow glow glow with NuGLO, let us help you restore your skin's shiny supple glow!"
     play sound phonebuzz
     tv_hi "So what are you waiting for? Grab your very own NuGLO samples at your local stores today!"
+    stop music fadeout 5.0
 
     $ hidebubbles = True
     play sound ding
@@ -30,8 +47,10 @@ label nov_1:
 
     #With one final look at his living room, Morgan swings his backpack onto his shoulder and then leaves his apartment.
 label nov_4:
-    $ save_name = _("Arc 1")
     scene black
+    $ current_day = _("November 4th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     mo "I'm Morgan. Undercover cop and proud member of the Special Operations Division."
     mo "Here on a mission to unravel the secrets behind an operation held by Heralign Inc. far out in the snowy mountains."
     mo "And to find out what happened to my partner in crime."
@@ -264,6 +283,9 @@ label nov_4:
 label nov_5:
     play music audio.neutral
     scene bg morganstent with longfade
+    $ current_day = _("November 5th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     #INT: Morgan's tent
 
     "I woke up to the sound of Pearl calling for me outside my tent."
@@ -371,6 +393,9 @@ label nov_5:
 label nov_6:
     #INT: Morgan's tent
     scene morganstent with longfade
+    $ current_day = _("November 6th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_intcampday fadein 1.0
     "Nice, I woke up on time."
     "Today is sample collection day. Wouldn't want to miss that."
@@ -485,6 +510,9 @@ label nov_7_11:
     #7th
     play music audio.light
     scene bg waterbody with longfade
+    $ current_day = _("November 7th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
 
     "Another sample collection day."
     "Today we're breaking some of the ice at the lake."
@@ -509,6 +537,9 @@ label nov_7_11:
     #8th
     #EXT: Camp 1
     scene bg camp1_night with longfade
+    $ current_day = _("November 8th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
 
     "After a long day, Aston decided that we should have canned soup for tonight."
     "He walks over to Pearl and hovers two different flavors in her face."
@@ -526,6 +557,9 @@ label nov_7_11:
 
     #9th
     #INT: Main tent
+    $ current_day = _("November 9th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     scene bg maintent_day with longfade
 
     "Lunch time, time to grab a quick snack from the food shelf."
@@ -553,6 +587,9 @@ label nov_7_11:
     #10th
     #EXT: Camp 1
     scene bg camp1_day with longfade
+    $ current_day = _("November 10th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play sound snowmobile loop
     "While on the way back to my tent. Gregory looks like he's about to go to the RC on his snowmobile."
     show gr neutral
@@ -575,6 +612,9 @@ label nov_7_11:
     #11th
     #INT: Main tent
     scene bg maintent_day with longfade
+    $ current_day = _("November 11th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
 
     "I had some free time on my hands today. According to the numbers that Colin gave me, I have yet to meet the majority of the people here."
     "The weather isn't suitable for walking longer distances. Apparently it's going to get stormy during these few weeks... months, even."
@@ -735,6 +775,9 @@ label nov_7_11:
 label nov_12:
     #EXT: Village
     scene bg village1 with longfade
+    $ current_day = _("November 12th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_village fadein 1.0
     #Kyle's POV
     show ky smile at centerleft with dissolve
@@ -813,6 +856,9 @@ label nov_12:
 
 label nov_13:
     scene bg morganstent with longfade
+    $ current_day = _("November 13th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
 
     "It's been roughly a week since I've been here."
     "Everything seems normal, perhaps a little too normal."
@@ -879,6 +925,9 @@ label nov_14:
     #INT: Morgan's tent
     scene bg morganstent with longfade
     play ambience amb_intcampday fadein 1.0
+    $ current_day = _("November 14th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
 
     play sound wrr
     "WRRRRRRRR"
@@ -1012,6 +1061,9 @@ label nov_14:
 label nov_15:
     #INT: Morgan's tent
     scene bg morganstent with longfade
+    $ current_day = _("November 15th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_intcampday fadein 1.0
 
     "Another day, another round of sore backs."
@@ -1258,6 +1310,9 @@ label nov_15:
 label nov_16:
     #EXT: Camp 1
     scene bg camp1_day with longfade
+    $ current_day = _("November 16th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_campday fadein 1.0
 
     "The next day after the storm, we got to work rebuilding the campsite."
@@ -1418,6 +1473,9 @@ label nov_16:
 label nov_17:
     #INT: Main tent
     scene bg maintent_day with longfade
+    $ current_day = _("November 17th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_intcampday fadein 1.0
     "It's been three days since we were stuck at camp."
     "Lorenzo and Gregory said that they'll be sending in new samples together. The batch we accumulated over the days was a little too much for one person to handle."
@@ -1548,6 +1606,9 @@ label nov_18:
     #EXT: Camp 1
     scene  bg camp1_day with dissolve
     play ambience amb_campday fadein 1.0
+    $ current_day = _("November 18th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     "The next day, Kyle returns home from Camp 2. Gregory had to pick him up 'cause the ragdoll idea wasn't as great as he thought."
 
     show pearl happy at centerright
@@ -1616,6 +1677,9 @@ label nov_19_23:
     #19th
     scene bg camp1_day with longfade
     play music audio.light
+    $ current_day = _("November 19th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
 
     "It's my favorite time of the day, meal time."
     "Looks like there's already a crowd gathered in here."
@@ -1677,6 +1741,9 @@ label nov_19_23:
     #20th
     #INT: Main tent
     scene bg maintent_day with longfade
+    $ current_day = _("November 20th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     "It's my first time seeing someone else using the table other than Gregory or Lorenzo."
     show ky smile
     mo "Morning Kyle, what are you up to?"
@@ -1703,6 +1770,9 @@ label nov_19_23:
     #21st
     #EXT: Camp 1
     scene bg camp1_night with longfade
+    $ current_day = _("November 21st")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_campnightwfire fadein 1.0
 
     "Mealtime around the campfire!"
@@ -1753,6 +1823,9 @@ label nov_19_23:
     #22nd
     #INT: Main tent
     scene bg maintent_day with longfade
+    $ current_day = _("November 22nd")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
 
     play sound toolrack volume 0.5
     "*crash*"
@@ -1807,6 +1880,9 @@ label nov_19_23:
 
     #23rd
     scene bg camp1_day with longfade
+    $ current_day = _("November 23rd")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     show ky happy at centerleft
     ky "-and then splash! The otter family all jumped into the river together!"
     ky "Gosh I love their little paws."
@@ -1850,6 +1926,9 @@ label nov_19_23:
 label nov_24:
     #EXT: Camp 1
     scene bg camp1_day with longfade
+    $ current_day = _("November 24th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play music audio.light
     "Today is rest day at camp."
     "Or in Pearl's words, tonight is marshmallow night!"
@@ -1967,6 +2046,9 @@ label nov_24:
 label nov_25:
     #EXT: Forest
     scene bg waterbody with longfade
+    $ current_day = _("November 25th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_campday fadein 1.0
     "Marshmallow night was a success, I had a great night's sleep."
     "New day, new samples."
@@ -2062,6 +2144,9 @@ label nov_25:
 label nov_26:
     #INT: Main tent
     scene bg maintent_day with longfade
+    $ current_day = _("November 26th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_intcampday fadein 1.0
     "Kyle, Lorenzo and I were having a discussion about animals."
     show ky smile at centerleft
@@ -2151,6 +2236,9 @@ label nov_27:
     #INT: Morgan's tent
     play ambience amb_intcampnight fadein 1.0
     scene bg morganstent with longfade
+    $ current_day = _("November 27th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     "It's time for a check in with my beloved Pancake."
 # TODO PHONE
     show satphone
@@ -2225,10 +2313,15 @@ label nov_27:
     "Anyhow, I should look out for Lorenzo."
     "I sincerely hope that his nightmares subsides soon."
     stop ambience fadeout 3.0
+    scene black with longfade
+    jump nov_28
 
 label nov_30:
     #INT: Main tent
     scene bg maintent_day with longfade
+    $ current_day = _("November 30th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_intcampday fadein 1.0
     "The past few days have just been the usual routine."
     "Wake up. Eat. Collect samples. Repeat."
@@ -2323,10 +2416,15 @@ label nov_30:
     "Well, if I do indirectly end up contributing to modern medicine study, that's a win in my books."
     "I wonder if the weather had something to do with the fungi appearing."
     stop music fadeout 3.0
+    scene black with longfade
+    jump dec_1
 
 label dec_2:
     #INT: Main tent
     scene bg maintent_day with longfade
+    $ current_day = _("December 2nd")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_intcampday fadein 3.0
     #Aston and Lorenzo's POV
     show lorenzo sick at centerright with dissolve
@@ -2409,6 +2507,9 @@ label dec_2:
 label dec_3:
     #INT: Main tent
     scene bg maintent_day with longfade
+    $ current_day = _("December 3rd")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play ambience amb_intcampday fadein 1.0
     show ast neutral
     "Today I was tasked with lunch duties, helping Aston out in the main tent."
@@ -2507,6 +2608,9 @@ label dec_3:
 
 label dec_4:
     scene bg camp1_night with longfade
+    $ current_day = _("December 4th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play music audio.light
 
     "Night falls in camp."
@@ -2579,6 +2683,9 @@ label dec_4:
 label dec_5:
     #INT: Main tent
     scene bg maintent_day with longfade
+    $ current_day = _("December 5th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     play music audio.neutral fadein 3.0
     show ky sad at left
     show lorenzo sick at centerleft
@@ -2684,6 +2791,9 @@ label dec_5:
 
 label dec_6_1:
     scene bg camp1_day with longfade
+    $ current_day = _("December 6th")
+    $ save_name = current_date(_("Arc 1"), current_day)
+    show screen date_label with dissolve
     "Essentials and equipment have all been well packed."
 
     "Today is moving day."

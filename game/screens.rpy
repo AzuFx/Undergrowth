@@ -688,14 +688,16 @@ screen file_slots(title):
 
                         has vbox
                         xalign 0.5
-                        spacing 12
+                        spacing 15
                         add FileScreenshot(slot)
 
-                        text FileSaveName(slot):
-                            style "slot_name_text"
+                        vbox:
+                            xalign 0.5
+                            text FileSaveName(slot):
+                                style "slot_name_text"
 
-                        text FileTime(slot, format=_("%d %B %Y, %H:%M"), empty=_("empty slot")):
-                            style "slot_time_text"
+                            text FileTime(slot, format=_("%d %B %Y, %H:%M"), empty=_("empty slot")):
+                                style "slot_time_text"
 
                         xoffset 1 yoffset 14
                         key "save_delete" action FileDelete(slot)
@@ -915,16 +917,16 @@ screen settings_audio():
                     label _("Mute all")
                     imagebutton auto "gui/settings/check_%s.png" action Preference("all mute", "toggle")
 
-                # hbox:
-                #     spacing 27
-                #     label _("Radio Static")
-                #     imagebutton auto "gui/settings/check_%s.png" action ToggleVariable("radio_static", "static", "clean")
-                #     textbutton _("Test"):
-                #         if radio_static == "static":
-                #             action Play("radio_effect", renpy.random.choice(["audio/ui/radio static/uistatic1.ogg", "audio/ui/radio static/uistatic2.ogg", "audio/ui/radio static/uistatic3.ogg"]))
-                #         else:
-                #             action Play("radio_effect", renpy.random.choice(["audio/ui/radio static/uiclean1.ogg", "audio/ui/radio static/uiclean2.ogg", "audio/ui/radio static/uiclean3.ogg"]))
-                #         pos (20,-20)
+                hbox:
+                    spacing 27
+                    label _("Radio Static")
+                    imagebutton auto "gui/settings/check_%s.png" action ToggleVariable("radio_static", true_value="_s", false_value="_c")
+                    textbutton _("Test"):
+                        if radio_static == "_s":
+                            action Play("radio_effect", renpy.random.choice(["audio/ui/radio static/uistatic1.ogg", "audio/ui/radio static/uistatic2.ogg", "audio/ui/radio static/uistatic3.ogg"]))
+                        else:
+                            action Play("radio_effect", renpy.random.choice(["audio/ui/radio static/uiclean1.ogg", "audio/ui/radio static/uiclean2.ogg", "audio/ui/radio static/uiclean3.ogg"]))
+                        pos (20,-20)
 
         vbox:
             xoffset -50

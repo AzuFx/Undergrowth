@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "SpooktoberDemo_1.2"
+define config.version = "WinterJamDemo_2.0"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -50,6 +50,7 @@ define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 define config.auto_voice = "voice/{id}.ogg"
+define config.voice_filename_format = "voice/{filename}.ogg"
 
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
